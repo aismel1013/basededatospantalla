@@ -1,8 +1,4 @@
-/* =======================================
-   ESTILOS - Registro de Producto Bellón
-   ======================================= */
 
-/* Toda la página */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,7 +11,7 @@ body {
   padding: 20px;
 }
 
-/* Caja grande que contiene todo */
+
 .contenedor {
   background-color: white;
   border-radius: 10px;
@@ -25,7 +21,7 @@ body {
   box-shadow: 0 4px 20px rgba(0,0,0,0.10);
 }
 
-/* Barra naranja de arriba con el título */
+
 .barra-titulo {
   background-color: #E87722;
   padding: 15px 25px;
@@ -36,14 +32,12 @@ body {
   font-size: 24px;
 }
 
-/* Divide la pantalla en dos: formulario | tabla */
+
 .cuerpo {
   display: flex;
 }
 
-/* =======================================
-   FORMULARIO (izquierda)
-   ======================================= */
+
 
 .formulario {
   width: 300px;
@@ -54,7 +48,7 @@ body {
   flex-direction: column;
 }
 
-/* Título naranja pequeño del formulario */
+
 .titulo-formulario {
   background-color: #E87722;
   color: white;
@@ -63,19 +57,18 @@ body {
   font-weight: bold;
 }
 
-/* Área donde van todos los campos */
 .campos {
   padding: 15px;
   flex: 1;
   overflow-y: auto;
 }
 
-/* Cada campo individual */
+
 .campo {
   margin-bottom: 12px;
 }
 
-/* Etiqueta encima del input */
+
 .campo label {
   display: block;
   font-size: 12px;
@@ -85,7 +78,7 @@ body {
   text-transform: uppercase;
 }
 
-/* Todos los inputs, select y textarea */
+
 .campo input,
 .campo select,
 .campo textarea {
@@ -97,7 +90,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Color naranja cuando el usuario hace clic */
+
 .campo input:focus,
 .campo select:focus,
 .campo textarea:focus {
@@ -105,20 +98,20 @@ body {
   border-color: #E87722;
 }
 
-/* Input de ID (solo lectura) */
+
 .campo input[readonly] {
   background-color: #efefef;
   color: #888;
   cursor: not-allowed;
 }
 
-/* Textarea más alto */
+
 .campo textarea {
   height: 60px;
   resize: none;
 }
 
-/* Dos campos uno al lado del otro */
+
 .dos-columnas {
   display: flex;
   gap: 8px;
@@ -128,7 +121,7 @@ body {
   flex: 1;
 }
 
-/* Cuadro de subir foto */
+
 .subir-foto {
   border: 2px dashed #E87722;
   border-radius: 8px;
@@ -150,7 +143,7 @@ body {
   margin: 5px 0 0 0;
 }
 
-/* Botones guardar / limpiar */
+
 .botones-formulario {
   padding: 12px 15px;
   border-top: 1px solid #ddd;
@@ -188,9 +181,7 @@ body {
   background-color: #f0f0f0;
 }
 
-/* =======================================
-   TABLA (derecha)
-   ======================================= */
+
 
 .panel-tabla {
   flex: 1;
@@ -200,7 +191,7 @@ body {
   gap: 12px;
 }
 
-/* Fila con título y botones */
+
 .cabecera-tabla {
   display: flex;
   justify-content: space-between;
@@ -246,7 +237,7 @@ body {
   background-color: #fff3ea;
 }
 
-/* Campo de búsqueda */
+
 .busqueda {
   width: 100%;
   padding: 8px 12px;
@@ -261,7 +252,7 @@ body {
   border-color: #E87722;
 }
 
-/* Caja que rodea la tabla */
+
 .caja-tabla {
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -269,7 +260,7 @@ body {
   flex: 1;
 }
 
-/* La tabla */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -300,12 +291,12 @@ tbody tr:hover {
   cursor: pointer;
 }
 
-/* Fila seleccionada */
+
 tbody tr.seleccionada {
   background-color: #fde8d0;
 }
 
-/* Mensaje cuando no hay datos */
+
 .sin-datos {
   text-align: center;
   color: #aaa;
