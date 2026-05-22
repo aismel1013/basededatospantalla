@@ -1,0 +1,314 @@
+/* =======================================
+   ESTILOS - Registro de Producto Bellón
+   ======================================= */
+
+/* Toda la página */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+/* Caja grande que contiene todo */
+.contenedor {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+}
+
+/* Barra naranja de arriba con el título */
+.barra-titulo {
+  background-color: #E87722;
+  padding: 15px 25px;
+}
+
+.barra-titulo h1 {
+  color: white;
+  font-size: 24px;
+}
+
+/* Divide la pantalla en dos: formulario | tabla */
+.cuerpo {
+  display: flex;
+}
+
+/* =======================================
+   FORMULARIO (izquierda)
+   ======================================= */
+
+.formulario {
+  width: 300px;
+  background-color: #f7f7f7;
+  border-right: 1px solid #ddd;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Título naranja pequeño del formulario */
+.titulo-formulario {
+  background-color: #E87722;
+  color: white;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Área donde van todos los campos */
+.campos {
+  padding: 15px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Cada campo individual */
+.campo {
+  margin-bottom: 12px;
+}
+
+/* Etiqueta encima del input */
+.campo label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+/* Todos los inputs, select y textarea */
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+}
+
+/* Color naranja cuando el usuario hace clic */
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: #E87722;
+}
+
+/* Input de ID (solo lectura) */
+.campo input[readonly] {
+  background-color: #efefef;
+  color: #888;
+  cursor: not-allowed;
+}
+
+/* Textarea más alto */
+.campo textarea {
+  height: 60px;
+  resize: none;
+}
+
+/* Dos campos uno al lado del otro */
+.dos-columnas {
+  display: flex;
+  gap: 8px;
+}
+
+.dos-columnas .campo {
+  flex: 1;
+}
+
+/* Cuadro de subir foto */
+.subir-foto {
+  border: 2px dashed #E87722;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 12px;
+  background-color: #fff8f3;
+}
+
+.subir-foto:hover {
+  background-color: #ffeedd;
+}
+
+.subir-foto p {
+  color: #E87722;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 5px 0 0 0;
+}
+
+/* Botones guardar / limpiar */
+.botones-formulario {
+  padding: 12px 15px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  gap: 10px;
+}
+
+.boton {
+  flex: 1;
+  padding: 9px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+.boton-guardar {
+  background-color: #E87722;
+  color: white;
+}
+
+.boton-guardar:hover {
+  background-color: #cf6510;
+}
+
+.boton-limpiar {
+  background-color: white;
+  color: #555;
+  border: 1px solid #ccc;
+}
+
+.boton-limpiar:hover {
+  background-color: #f0f0f0;
+}
+
+/* =======================================
+   TABLA (derecha)
+   ======================================= */
+
+.panel-tabla {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Fila con título y botones */
+.cabecera-tabla {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cabecera-tabla h2 {
+  font-size: 17px;
+  color: #222;
+}
+
+.botones-accion {
+  display: flex;
+  gap: 8px;
+}
+
+.boton-accion {
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+.boton-naranja {
+  background-color: #E87722;
+  color: white;
+  border: none;
+}
+
+.boton-naranja:hover {
+  background-color: #cf6510;
+}
+
+.boton-borde {
+  background-color: white;
+  color: #E87722;
+  border: 2px solid #E87722;
+}
+
+.boton-borde:hover {
+  background-color: #fff3ea;
+}
+
+/* Campo de búsqueda */
+.busqueda {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+}
+
+.busqueda:focus {
+  outline: none;
+  border-color: #E87722;
+}
+
+/* Caja que rodea la tabla */
+.caja-tabla {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: auto;
+  flex: 1;
+}
+
+/* La tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+thead tr {
+  background-color: #fce8d5;
+}
+
+th {
+  padding: 10px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: bold;
+  color: #B85A10;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 9px 10px;
+  border-top: 1px solid #f0f0f0;
+  color: #333;
+}
+
+tbody tr:hover {
+  background-color: #fff7f0;
+  cursor: pointer;
+}
+
+/* Fila seleccionada */
+tbody tr.seleccionada {
+  background-color: #fde8d0;
+}
+
+/* Mensaje cuando no hay datos */
+.sin-datos {
+  text-align: center;
+  color: #aaa;
+  padding: 30px;
+  font-size: 13px;
+}
