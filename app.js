@@ -1,8 +1,4 @@
-/* =============================================
-   app.js - Frontend
-   Toda la lógica de la pantalla va aquí.
-   Se comunica con el backend usando fetch().
-   ============================================= */
+
 
 /* URL base del backend (cambia el puerto si es diferente) */
 var URL_BACKEND = 'http://localhost:3000';

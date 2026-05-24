@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Registro de sucursal - Ferretería Bellón</title>
-  <link rel="stylesheet" href="producto.css">
+  <link rel="stylesheet" href="sucursal.css">
 </head>
 <body>
 
 <div class="contenedor">
 
-  <!-- Barra naranja de arriba -->
+  
   <div class="barra-titulo">
-    <h1> sucursal</h1>
+    <h1> Sucursal</h1>
   </div>
 
   <div class="cuerpo">
@@ -29,48 +29,23 @@
           <input type="text" id="id_producto" placeholder="Autogenerado" readonly>
         </div>
 
-        <!-- Categoría -->
-        <div class="campo">
-          <label>Nombre</label>
-          <select id="id_categoria">
-            
-          </select>
-        </div>
-
         
         <div class="campo">
           <label>Nombre</label>
           <input type="text" id="nombre" placeholder="Nombre del producto">
         </div>
 
-        
-        <div class="dos-columnas">
-          <div class="campo">
-            <label>Precio</label>
-            <input type="number" id="precio" placeholder="0.00" min="0">
-          </div>
-          <div class="campo">
-            <label>Costo</label>
-            <input type="number" id="costo" placeholder="0.00" min="0">
-          </div>
+        <div class="campo">
+          <label>direccion</label>
+          <textarea id="descripcion" placeholder="Descripción del producto..."></textarea>
         </div>
 
         
-        <div class="dos-columnas">
-          <div class="campo">
-            <label>Stock</label>
-            <input type="number" id="stock" placeholder="0" min="0">
-          </div>
-          <div class="campo">
-            <label>Tipo</label>
-            <input type="text" id="tipo_producto" placeholder="Tipo">
-          </div>
-        </div>
 
         
         <div class="campo">
-          <label>Descripción</label>
-          <textarea id="descripcion" placeholder="Descripción del producto..."></textarea>
+          <label>telefono</label>
+          <input type="text" id="telefono" placeholder="numero de telefono">
         </div>
 
         
@@ -91,7 +66,7 @@
     <div class="panel-tabla">
 
       <div class="cabecera-tabla">
-        <h2>Lista de productos</h2>
+        <h2>Sucursales</h2>
         <div class="botones-accion">
           <button class="boton-accion boton-naranja" id="btn-nuevo">+ Nuevo</button>
           <button class="boton-accion boton-borde"   id="btn-editar">✏ Editar</button>
@@ -99,7 +74,7 @@
       </div>
 
       <input class="busqueda" type="text" id="busqueda"
-             placeholder="🔍 Buscar por nombre, categoría o tipo...">
+             placeholder= buscar sucursales>
 
       <div class="caja-tabla">
         <table>
@@ -107,12 +82,8 @@
             <tr>
               <th>ID</th>
               <th>Nombre</th>
-              <th>Categoría</th>
-              <th>Tipo</th>
-              <th>Precio</th>
-              <th>Costo</th>
-              <th>Stock</th>
-              <th>Descripción</th>
+              <th>direccion</th>
+              <th>telefono</th>
             </tr>
           </thead>
           <tbody id="cuerpo-tabla">
@@ -129,7 +100,7 @@
 </div>
 
 
-<script src="app.js"></script>
+<script src="index.js"></script>
 
 </body>
 </html>
