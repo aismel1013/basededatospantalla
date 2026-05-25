@@ -3,7 +3,7 @@ console.log("¡El archivo appdeproductos.js se ha cargado correctamente!");
 document.getElementById("btn-guardar").addEventListener("click", async () => {
     console.log("¡Hiciste clic en el botón Guardar Producto!");
 
-    // Se eliminó por completo la línea que leía el "stock" para evitar el error de 'null'
+    
     const producto = {
         id_categoria: document.getElementById("categoria").value,
         nombre: document.getElementById("nombre").value,
@@ -13,7 +13,7 @@ document.getElementById("btn-guardar").addEventListener("click", async () => {
         descripcion: document.getElementById("descripcion").value
     };
 
-    if (!producto.id_categoria || !producto.nombre || !producto.precio) {
+    if (producto.id_categoria || producto.nombre || producto.precio) {
         alert("Por favor, llena los campos obligatorios (Categoría, Nombre y Precio)");
         return;
     }
@@ -34,7 +34,7 @@ document.getElementById("btn-guardar").addEventListener("click", async () => {
         alert(data.mensaje);
 
         if (respuesta.ok) {
-            // Limpia los campos existentes en tu HTML original
+            
             document.getElementById("categoria").value = "";
             document.getElementById("nombre").value = "";
             document.getElementById("precio").value = "";
