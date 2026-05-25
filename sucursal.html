@@ -9,96 +9,47 @@
 
 <div class="contenedor">
 
-  
   <div class="barra-titulo">
-    <h1> Sucursal</h1>
+    <h1>Sucursal</h1>
   </div>
 
   <div class="cuerpo">
 
- 
     <div class="formulario">
-
       <div class="titulo-formulario">Registro de datos para la sucursal</div>
 
       <div class="campos">
 
-       
         <div class="campo">
           <label>ID sucursal</label>
-          <input type="text" id="id_producto" placeholder="Autogenerado" readonly>
+          <input type="text" id="id_sucursal" placeholder="Autogenerado" readonly>
         </div>
 
-        
         <div class="campo">
           <label>Nombre</label>
-          <input type="text" id="nombre" placeholder="Nombre del producto">
+          <input type="text" id="nombre" placeholder="Nombre de la sucursal">
         </div>
 
         <div class="campo">
-          <label>direccion</label>
-          <textarea id="descripcion" placeholder="Descripción del producto..."></textarea>
+          <label>Dirección</label>
+          <textarea id="direccion" placeholder="Dirección de la sucursal..."></textarea>
         </div>
 
-        
-
-        
         <div class="campo">
-          <label>telefono</label>
-          <input type="text" id="telefono" placeholder="numero de telefono">
+          <label>Teléfono</label>
+          <input type="text" id="telefono" placeholder="Número de teléfono">
         </div>
-
-        
-        
 
       </div>
 
-   
       <div class="botones-formulario">
-        <button class="boton boton-guardar" id="btn-guardar">Guardar</button>
-        <button class="boton boton-limpiar" id="btn-limpiar">Limpiar</button>
+        <button type="button" class="boton boton-guardar" id="btn-guardar">Guardar</button>
+        <button type="button" class="boton boton-limpiar" id="btn-limpiar">Limpiar</button>
       </div>
-
-    </div>
-
-
-    
-    <div class="panel-tabla">
-
-      <div class="cabecera-tabla">
-        <h2>Sucursales</h2>
-        <div class="botones-accion">
-          <button class="boton-accion boton-naranja" id="btn-nuevo">+ Nuevo</button>
-          <button class="boton-accion boton-borde"   id="btn-editar">✏ Editar</button>
-        </div>
-      </div>
-
-      <input class="busqueda" type="text" id="busqueda"
-             placeholder= buscar sucursales>
-
-      <div class="caja-tabla">
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Nombre</th>
-              <th>direccion</th>
-              <th>telefono</th>
-            </tr>
-          </thead>
-          <tbody id="cuerpo-tabla">
-            <tr>
-              <td colspan="8" class="sin-datos">Cargando productos...</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
     </div>
 
   </div>
 </div>
-
 
 <script src="index.js"></script>
 

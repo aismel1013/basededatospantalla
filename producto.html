@@ -9,21 +9,17 @@
 
 <div class="contenedor">
 
-  <!-- Barra naranja de arriba -->
   <div class="barra-titulo">
-    <h1> Producto</h1>
+    <h1>Producto</h1>
   </div>
 
   <div class="cuerpo">
 
- 
     <div class="formulario">
-
       <div class="titulo-formulario">Registro de producto</div>
 
       <div class="campos">
 
-       
         <div class="campo">
           <label>ID Producto</label>
           <input type="text" id="id_producto" placeholder="Autogenerado" readonly>
@@ -31,16 +27,14 @@
 
         <div class="campo">
           <label>Id_categoria</label>
-          <input type="text" id="nombre" placeholder="id de la categoria">
+          <input type="number" id="categoria" placeholder="id de la categoria">
         </div>
 
-        
         <div class="campo">
           <label>Nombre</label>
           <input type="text" id="nombre" placeholder="Nombre del producto">
         </div>
 
-        
         <div class="dos-columnas">
           <div class="campo">
             <label>Precio</label>
@@ -52,7 +46,6 @@
           </div>
         </div>
 
-        
         <div class="dos-columnas">
           <div class="campo">
             <label>Stock</label>
@@ -64,69 +57,23 @@
           </div>
         </div>
 
-        
         <div class="campo">
           <label>Descripción</label>
           <textarea id="descripcion" placeholder="Descripción del producto..."></textarea>
         </div>
 
-        
-        
-
       </div>
 
-   
       <div class="botones-formulario">
-        <button class="boton boton-guardar" id="btn-guardar">Guardar</button>
-        <button class="boton boton-limpiar" id="btn-limpiar">Limpiar</button>
+        <button type="button" class="boton boton-guardar" id="btn-guardar">Guardar</button>
+        <button type="button" class="boton boton-limpiar" id="btn-limpiar">Limpiar</button>
       </div>
-
-    </div>
-
-
-    
-    <div class="panel-tabla">
-
-      <div class="cabecera-tabla">
-        <h2>Lista de productos</h2>
-        <div class="botones-accion">
-          <button class="boton-accion boton-naranja" id="btn-nuevo">+ Nuevo</button>
-          <button class="boton-accion boton-borde"   id="btn-editar">✏ Editar</button>
-        </div>
-      </div>
-
-      <input class="busqueda" type="text" id="busqueda"
-             placeholder="🔍 Buscar por nombre, categoría o tipo...">
-
-      <div class="caja-tabla">
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Nombre</th>
-              <th>Categoría</th>
-              <th>Tipo</th>
-              <th>Precio</th>
-              <th>Costo</th>
-              <th>Stock</th>
-              <th>Descripción</th>
-            </tr>
-          </thead>
-          <tbody id="cuerpo-tabla">
-            <tr>
-              <td colspan="8" class="sin-datos">Cargando productos...</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
     </div>
 
   </div>
 </div>
 
-
-<script src="app.js"></script>
+<script src="appdeproductos.js"></script>
 
 </body>
 </html>
