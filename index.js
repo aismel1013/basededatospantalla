@@ -3,14 +3,17 @@ console.log("¡El archivo index.js de sucursales se ha cargado correctamente!");
 document.getElementById("btn-guardar").addEventListener("click", async () => {
     console.log("¡Hiciste clic en el botón Guardar Sucursal!");
 
+   
     const sucursal = {
+        id_sucursal: document.getElementById("id_sucursal").value,
         nombre: document.getElementById("nombre").value,
         direccion: document.getElementById("direccion").value, 
         telefono: document.getElementById("telefono").value
     };
 
-    if (!sucursal.nombre || !sucursal.direccion) {
-        alert("Por favor, llena los campos obligatorios (Nombre y Dirección)");
+   
+    if (!sucursal.id_sucursal || !sucursal.nombre || !sucursal.direccion) {
+        alert("Por favor, llena los campos obligatorios (ID, Nombre y Dirección)");
         return;
     }
 
@@ -30,6 +33,8 @@ document.getElementById("btn-guardar").addEventListener("click", async () => {
         alert(data.mensaje);
 
         if (respuesta.ok) {
+           
+            document.getElementById("id_sucursal").value = "";
             document.getElementById("nombre").value = "";
             document.getElementById("direccion").value = "";
             document.getElementById("telefono").value = "";
