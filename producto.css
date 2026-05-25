@@ -19,7 +19,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   width: 100%;
-  max-width: 450px; /* Reducido para centrar el formulario perfectamente */
+  max-width: 450px; 
   margin: 0 auto;
   box-shadow: 0 4px 20px rgba(0,0,0,0.10);
 }

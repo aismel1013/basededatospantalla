@@ -17,7 +17,7 @@ document.getElementById("btn-guardar").addEventListener("click", async () => {
     console.log("Datos de la sucursal listos para enviar:", sucursal);
 
     try {
-        const respuesta = await fetch("http://26.248.115.226:3000/sucursales", {
+        const respuesta = await fetch("http://localhost:3000/sucursales", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -37,6 +37,6 @@ document.getElementById("btn-guardar").addEventListener("click", async () => {
 
     } catch (error) {
         console.error("Error al intentar hacer el Fetch:", error);
-        alert("Error de conexión: No se pudo comunicar con el servidor de tu compañero.");
+        alert("Error: No se pudo comunicar con tu servidor local. ¿Olvidaste ejecutar 'node server.js'?");
     }
 });
