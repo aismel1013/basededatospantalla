@@ -1,7 +1,7 @@
-console.log("¡El archivo index.js de sucursales se ha cargado correctamente!");
+console.log("El archivo index.js sirve");
 
 document.getElementById("btn-guardar").addEventListener("click", async () => {
-    console.log("¡Hiciste clic en el botón Guardar Sucursal!");
+ console.log("Hiciste clic en el boton guardar");
 
    
     const sucursal = {
