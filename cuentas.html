@@ -1,0 +1,64 @@
+{{#block "styles"}}
+    <link rel="stylesheet" href="cuentas.css">
+{{/block}}
+
+<div class="account-page-wrapper">
+    
+    <div class="sis-card">
+        
+        <div class="sis-header">
+            <h1>Ferreteria <span>Bellon</span></h1>
+        </div>
+
+        <h2 class="section-title">Cambiar de cuenta</h2>
+
+        <div class="account-container" id="accountList">
+            {{#each cuentas}}
+                <div class="account-row {{#if this.esActiva}}active{{/if}}" onclick="seleccionarCuenta(this, '{{this.nombre}}')">
+                    
+                    <div class="active-indicator"></div>
+                    
+                    <div class="check-icon">✓</div>
+                    
+                    <div class="avatar-circle">
+                        <div class="avatar-silhouette"></div>
+                    </div>
+                    
+                    <div class="profile-info">
+                        <span class="profile-name">{{this.nombre}}</span>
+                        <span class="profile-phone">{{this.telefono}}</span>
+                    </div>
+                    
+                    <button type="button" class="logout-btn" onclick="cerrarSesionPerfil(event, '{{this.nombre}}')">
+                        Cerrar sesión
+                    </button>
+                    
+                </div>
+            {{else}}
+                <div class="txt-vacio">
+                    <p>No hay cuentas vinculadas en este equipo.</p>
+                </div>
+            {{/each}}
+        </div>
+
+        <div class="add-account-row" onclick="agregarCuenta()">
+            <div class="add-icon-box">
+                <span class="plus-symbol">+</span>
+            </div>
+            <span class="add-text">Agregar cuentas</span>
+        </div>
+
+        <div class="business-box">
+            <p class="business-prompt">¿no tienes cuenta?</p>
+            <a href="#" class="business-link">Crea una cuenta en nestra pagina</a>
+        </div>
+
+       
+
+    </div>
+
+</div>
+
+{{#block "scripts"}}
+    <script src="cuentas.js"></script>
+{{/block}}
