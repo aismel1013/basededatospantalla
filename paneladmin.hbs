@@ -1,0 +1,187 @@
+{{#block "styles"}}
+    <link rel="stylesheet" href="admin.css">
+{{/block}}
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar">
+
+        <div class="sidebar-logo">
+            <h2>Ferretería Bellón</h2>
+        </div>
+
+        <button class="sidebar-btn active" onclick="mostrarFormulario('productos')">
+            Registrar Productos
+        </button>
+
+        <button class="sidebar-btn" onclick="mostrarFormulario('sucursales')">
+            Registrar Sucursales
+        </button>
+
+        <a href="/logout" class="sidebar-btn cerrar">
+            Cerrar sesión
+        </a>
+
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main class="admin-content">
+
+        <!-- FORMULARIO PRODUCTOS -->
+        <section id="form-productos">
+
+            <div class="contenedor">
+
+                <div class="barra-titulo">
+                    <h1>Ferretería Bellón</h1>
+                </div>
+
+                <div class="cuerpo">
+
+                    <div class="formulario">
+
+                        <div class="titulo-formulario">
+                            Registro de producto
+                        </div>
+
+                        <div class="campos">
+
+                            <div class="campo">
+                                <label>ID Producto (Manual)</label>
+                                <input type="number" id="id_producto" placeholder="Ej. 1">
+                            </div>
+
+                            <div class="campo">
+                                <label>Id_categoria</label>
+                                <input type="number" id="categoria" placeholder="id de la categoria">
+                            </div>
+
+                            <div class="campo">
+                                <label>Nombre</label>
+                                <input type="text" id="nombre" placeholder="Nombre del producto">
+                            </div>
+
+                            <div class="dos-columnas">
+
+                                <div class="campo">
+                                    <label>Precio</label>
+                                    <input type="number" id="precio" placeholder="0.00">
+                                </div>
+
+                                <div class="campo">
+                                    <label>Costo</label>
+                                    <input type="number" id="costo" placeholder="0.00">
+                                </div>
+
+                            </div>
+
+                            <div class="dos-columnas">
+
+                                <div class="campo">
+                                    <label>Stock</label>
+                                    <input type="number" id="stock" placeholder="0">
+                                </div>
+
+                                <div class="campo">
+                                    <label>Tipo</label>
+                                    <input type="text" id="tipo_producto" placeholder="Tipo">
+                                </div>
+
+                            </div>
+
+                            <div class="campo">
+                                <label>Descripción</label>
+                                <textarea id="descripcion" placeholder="Descripción del producto..."></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="botones-formulario">
+
+                            <button type="button" class="boton boton-guardar" id="btn-guardar-producto">
+                                Guardar
+                            </button>
+
+                            <button type="button" class="boton boton-limpiar" onclick="limpiarProducto()">
+                                Limpiar
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FORMULARIO SUCURSALES -->
+        <section id="form-sucursales" style="display:none;">
+
+            <div class="contenedor">
+
+                <div class="barra-titulo">
+                    <h1>Ferretería Bellón</h1>
+                </div>
+
+                <div class="cuerpo">
+
+                    <div class="formulario">
+
+                        <div class="titulo-formulario">
+                            Registro de datos para la sucursal
+                        </div>
+
+                        <div class="campos">
+
+                            <div class="campo">
+                                <label>ID sucursal (Manual)</label>
+                                <input type="number" id="id_sucursal" placeholder="Ej. 1">
+                            </div>
+
+                            <div class="campo">
+                                <label>Nombre</label>
+                                <input type="text" id="nombre_sucursal" placeholder="Nombre de la sucursal">
+                            </div>
+
+                            <div class="campo">
+                                <label>Dirección</label>
+                                <textarea id="direccion" placeholder="Dirección de la sucursal..."></textarea>
+                            </div>
+
+                            <div class="campo">
+                                <label>Teléfono</label>
+                                <input type="text" id="telefono" placeholder="Número de teléfono">
+                            </div>
+
+                        </div>
+
+                        <div class="botones-formulario">
+
+                            <button type="button" class="boton boton-guardar" id="btn-guardar-sucursal">
+                                Guardar
+                            </button>
+
+                            <button type="button" class="boton boton-limpiar" onclick="limpiarSucursal()">
+                                Limpiar
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+{{#block "scripts"}}
+<script src="admin.js"></script>
+{{/block}}
